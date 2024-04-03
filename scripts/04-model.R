@@ -11,31 +11,29 @@
 #### Workspace setup ####
 library(tidyverse)
 library(rstanarm)
+library(poissonreg)
+library(tidymodels)
+library(tidyverse)
 
 #### Read data ####
 analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
 
 #### Set Period ####
 period_data <- analysis_data |>
-  filter(week > 0 )
+  filter(week < 10)
 
 ### Model data ####
-first_model <-
-  stan_glm(
-    formula = flying_time ~ length + width,
-    data = analysis_data,
-    family = gaussian(),
-    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
-    seed = 853
+first_9_weeks_passing_model_2023 <-
+  linear_reg() |>
+  set_engine(engine = "lm") |>
+  fit(
+    passing_epa ~ completions + attempts + passing_yards + passing_tds + interceptions + sacks + sack_yards,
+    data = period_data
   )
-
-
 #### Save model ####
 saveRDS(
-  first_model,
-  file = "models/first_model.rds"
+  first_9_weeks_passing_model_2023,
+  file = "models/first_9_weeks_passing_model_2023.rds"
 )
 
 

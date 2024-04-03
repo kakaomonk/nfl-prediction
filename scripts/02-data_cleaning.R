@@ -17,8 +17,9 @@ raw_data <- read_csv("data/raw_data/raw_data.csv")
 cleaned_data <-
   raw_data |>
   janitor::clean_names() |>
-  select(player_id, season, week, completions, attempts, passing_epa) |>
+  select(player_id, season, week, completions, attempts, passing_yards, passing_tds, interceptions, sacks, sack_yards, passing_epa) |>
+  filter(season == 2023)|>
   tidyr::drop_na()
 
 #### Save data ####
-write_csv(cleaned_data,"outputs/data/analysis_data/analysis_data.csv")
+write_csv(cleaned_data,"data/analysis_data/analysis_data.csv")
