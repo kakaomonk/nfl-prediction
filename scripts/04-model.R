@@ -15,6 +15,10 @@ library(rstanarm)
 #### Read data ####
 analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
 
+#### Set Period ####
+period_data <- analysis_data |>
+  filter(week > 0 )
+
 ### Model data ####
 first_model <-
   stan_glm(
