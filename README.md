@@ -1,25 +1,23 @@
-# Starter folder
+# NFL Prediction: Analysis of Passing EPA based on first nine weeks
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
-
+This repo studies the first 9 weeeks of NHL specialized in 'Passing EPA' anaylsis/prediction for the later weeks.
 
 ## File Structure
 
 The repo is structured as:
 
--   `data/raw_data` contains the raw data as obtained from X.
+-   `data/raw_data` contains the raw data as obtained from NFLverse.
 -   `data/analysis_data` contains the cleaned dataset that was constructed.
 -   `model` contains fitted models. 
--   `other` contains relevant literature, details about LLM chat interactions, and sketches.
--   `paper` contains the files used to generate the paper, including the Quarto document and reference bibliography file, as well as the PDF of the paper. 
--   `scripts` contains the R scripts used to simulate, download and clean data.
+-   `paper` contains paper.pdf and paper.qmd to produce paper.pdf
+-   `scripts` contains the R scripts for downloading/cleaning raw data and building model.
 
 
 ## Statement on LLM usage
 
-Aspects of the code were written with the help of the auto-complete tool, Codriver. The abstract and introduction were written with the help of ChatHorse and the entire chat history is available in inputs/llms/usage.txt.
+There was no LLM usage for this study.
 
 ## Some checks
 

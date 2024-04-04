@@ -13,7 +13,6 @@ library(tidyverse)
 library(rstanarm)
 library(poissonreg)
 library(tidymodels)
-library(tidyverse)
 
 #### Read data ####
 analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
