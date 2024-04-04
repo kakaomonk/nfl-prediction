@@ -52,18 +52,15 @@ Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta
 
 ```{=tex}
 \begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1) \\
-y~
+y &= B_0 + B_{1} X_{completions} + B_{2} X_{attempts} + B_{3} X_{passing_yards} \\
+&+ B_{4} X_{passing_tds} + B_{5} X_{interceptions} + B_{6} X_{sacks} + B_{7} X_{sack_yard}
 \end{align}
 ```
 The model was ran in R[@citeR] by using rstanarm[@rstanarm].
 
 ### Model justification
+
+The model considers 6 predictor variables (completions, attempts, passing_yards, passing_tds, interceptions, sacks, sack_yard) to predict passing_epa.
 
 # Results
 
@@ -91,16 +88,8 @@ first_9_weeks_passing_model_2023 <-
 first_9_weeks_passing_model_2023
 ```
 
-# Discussion
+As a result, the paper could predict that the passing distance (passing_yards) and the number of touchdowns influence to the total expected points added on passing.
 
-## First discussion point {#sec-first-point}
-
-## Second discussion point
-
-## Third discussion point
-
-## Weaknesses and next steps
-
-Weaknesses and next steps should also be included. \newpage
+\newpage
 
 # References
