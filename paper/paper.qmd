@@ -88,7 +88,7 @@ first_9_weeks_passing_model_2023 <-
 first_9_weeks_passing_model_2023
 ```
 
-As a result, the paper could predict that the passing distance (passing_yards) and the number of touchdowns influence to the total expected points added on passing.
+As a result, the paper could predict that the passing distance (passing_yards (+0.09604)), the number of touchdowns (passing_tds (1.68490)), number of sacks (sacks (-1.33799)), and yards of lost sack (sack_yards (-0.09272)) influence to the total expected points added on passing. In addition, the number of touchdowns (passing_tds (1.68490)) and number of sacks (sacks (-1.33799)) influence to the total expected points added on passing significantly.
 
 \newpage
 
